@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Routes::get('/', ['middleware' => 'auth', 'uses' => 'HomeController@index']);
