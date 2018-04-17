@@ -48,6 +48,20 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        
+public function render($request, Exception $exception)
+{
+        // 刷新Token过期之自定义错误  www.firstphp.com 
+        if ($exception-&amp;amp;gt;getCode() == 401) {
+        return Response::json(['status' = false, 'msg' = 'The refresh token is invalid', 'code' = 401]);
+        }
+         
+        // Token过期之自定义错误  www.firstphp.com
+        if($exception-&amp;amp;gt;getMessage() == 'Unauthenticated.'){
+        // return redirect('login');
+        return Response::json(['status' = false, 'msg' = 'Unauthenticated', 'code' = 40001]);
+        }
+        
         return parent::render($request, $exception);
     }
 }
