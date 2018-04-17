@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+                    <div class="index_map"><img src="i.gpg"></div>
+                    <div class="index_map"><img src="i.gpg"></div>
+                    <div class="index_map"><img src="i.gpg"></div>
+                    <div class="index_map"><img src="i.gpg"></div>
                 </div>
             </div>
         </div>
