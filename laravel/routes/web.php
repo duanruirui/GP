@@ -50,3 +50,6 @@ Route::post('menu/edit/{id}', ['middleware' => 'auth', 'uses' => 'MenuController
 Route::get('menu/add', ['middleware' => 'auth', 'uses' => 'MenuController@addGet']);
 Route::post('menu/add', ['middleware' => 'auth', 'uses' =>'MenuController@addPost']);
 Route::get('menu/delete/{id}', ['middleware' => 'auth', 'uses' => 'MenuController@delete'])->where('id', '[0-9]+');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
