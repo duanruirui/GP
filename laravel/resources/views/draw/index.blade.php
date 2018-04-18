@@ -1,10 +1,14 @@
-@extends('layouts.app')
-@section('content')
-<div style="margin:0 auto;">
-	<canvas id="cv"></canvas>
-</div>
-@endsection
-<script type="text/javascript">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用canvas绘制折线图</title>
+</head>
+<body>
+    <canvas id="cv"></canvas>
+</body>
+</html>
+<script>
     var cv = document.getElementById("cv");
     cv.width = 600;
     cv.height = 400;
