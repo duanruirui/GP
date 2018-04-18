@@ -3,7 +3,8 @@
 <div style="margin:0 auto;">
 	<canvas id="cv"></canvas>
 </div>
-<script>
+@endsection
+<script type="text/javascript">
     var cv = document.getElementById("cv");
     cv.width = 600;
     cv.height = 400;
@@ -62,5 +63,3 @@
         ctx.stroke();
     }
 </script>
-
-@endsection
