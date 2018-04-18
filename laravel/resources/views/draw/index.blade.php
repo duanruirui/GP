@@ -1,12 +1,12 @@
 @extends('layouts.draw')
 @section('content')
-<div style="margin:0 auto;text-align: center">
+<div style="margin:0 auto;text-align: center;">
 	<canvas id="cv"></canvas>
 </div>
 <script type="text/javascript">
     var cv = document.getElementById("cv");
-    cv.width = 300;
-    cv.height = 200;
+    cv.width = 600;
+    cv.height = 400;
     cv.style.border = "0.05rem solid gray";
     var ctx = cv.getContext("2d");
     var data2 = [.3, .1, .2, .4, .2, .7, .3, .9, .3,.1, .2, .4, .2, .7, .3, .9];
