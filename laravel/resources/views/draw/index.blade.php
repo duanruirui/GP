@@ -5,8 +5,8 @@
 </div>
 <script type="text/javascript">
     var cv = document.getElementById("cv");
-    cv.width = 600;
-    cv.height = 400;
+    cv.width = 100%;
+    cv.height = 15rem;
     cv.style.border = "0.05rem solid gray";
     var ctx = cv.getContext("2d");
     var data2 = [.3, .1, .2, .4, .2, .7, .3, .9, .3,.1, .2, .4, .2, .7, .3, .9];
