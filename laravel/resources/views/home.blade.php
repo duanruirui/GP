@@ -1,17 +1,5 @@
 @extends('layouts.app')
 @section('style')
-<style type="text/css">
-.index_map{
-    width:50%;
-    height: auto;
-    margin:0 auto;
-    padding: 0 auto;
-}
-.index_map img{
-    width:90%;
-    margin:0 auto;
-}
-</style>
 @endsection
 @section('content')
 <div class="container">
@@ -29,16 +17,16 @@
 
                     You are logged in!
                     <div class="index_map">
-                        <img src="http://img.tupianzj.com/uploads/allimg/160812/9-160Q2215I3.jpg">
+                        <img src="/images/1.jpg">
                     </div>
                     <div class="index_map">
-                        <img src="http://img.tupianzj.com/uploads/allimg/160812/9-160Q2215I3.jpg">
+                        <img src="/images/1.jpg">
                     </div>
                     <div class="index_map">
-                        <img src="http://img.tupianzj.com/uploads/allimg/160812/9-160Q2215I3.jpg">
+                        <img src="/images/1.jpg">
                     </div>
                     <div class="index_map">
-                        <img src="http://img.tupianzj.com/uploads/allimg/160812/9-160Q2215I3.jpg">
+                        <img src="/images/1.jpg">
                     </div>
                 </div>
             </div>
