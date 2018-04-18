@@ -17,17 +17,19 @@
                     @endif
 
                     You are logged in!
-                    <div class="index_map">
-                        <img src="/images/1.jpg">
-                    </div>
-                    <div class="index_map">
-                        <img src="/images/1.jpg">
-                    </div>
-                    <div class="index_map">
-                        <img src="/images/1.jpg">
-                    </div>
-                    <div class="index_map">
-                        <img src="/images/1.jpg">
+                    <div class="medu">
+                        <div class="index_map">
+                            <img src="/images/1.jpg">
+                        </div>
+                        <div class="index_map">
+                            <img src="/images/1.jpg">
+                        </div>
+                        <div class="index_map">
+                            <img src="/images/1.jpg">
+                        </div>
+                        <div class="index_map">
+                            <img src="/images/1.jpg">
+                        </div>                        
                     </div>
                 </div>
             </div>
