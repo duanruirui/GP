@@ -1,0 +1,14 @@
+.index_map{
+	width: 40%;
+	height: auto;
+	margin:0 auto;
+	padding: 0;
+	float: left;
+}
+
+.index_map img{
+	width:100%;
+	overflow: hidden;
+	margin:0 auto;
+	padding: 0;
+}
