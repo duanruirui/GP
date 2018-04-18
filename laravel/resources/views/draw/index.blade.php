@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<canvas id="cv"></canvas>
-
+<div style="margin:0 auto;">
+	<canvas id="cv"></canvas>
+</div>
 <script>
     var cv = document.getElementById("cv");
     cv.width = 600;
