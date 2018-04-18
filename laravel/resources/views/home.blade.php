@@ -19,16 +19,16 @@
                     You are logged in!
                     <div class="medu">
                         <div class="index_map">
-                            <img src="/images/1.jpg">
+                            <img src="/images/1.gif">
                         </div>
                         <div class="index_map">
-                            <img src="/images/1.jpg">
+                            <img src="/images/1.gif">
                         </div>
                         <div class="index_map">
-                            <img src="/images/1.jpg">
+                            <img src="/images/1.gif">
                         </div>
                         <div class="index_map">
-                            <img src="/images/1.jpg">
+                            <img src="/images/1.gif">
                         </div>                        
                     </div>
                 </div>
