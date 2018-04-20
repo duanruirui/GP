@@ -1,6 +1,7 @@
 @extends('layouts.draw')
 @section('content')
 <div style="margin:0 auto;text-align: center;">
+    <h1 style="text-align: center;">statistics</h1>
 	<canvas id="cv" style="width:99%;height:300;border:0.05rem solid gray;"></canvas>
 </div>
 <script type="text/javascript">
