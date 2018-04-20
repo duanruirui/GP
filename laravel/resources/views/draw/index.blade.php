@@ -6,7 +6,7 @@
 <script type="text/javascript">
     var cv = document.getElementById("cv");
     var ctx = cv.getContext("2d");
-    var data2 = [.3, .1, .2, .4, .2, .7, .3, .9, .3,.1, .2, .4, .2, .7, .3, .9];
+    var data2 = [.3, .1, .2, .4, .2, .7, .3, .9];
     var data3 = [3, 12, 14, 17, 29, 33, 40, 52];
 
     getBrokenLine(data2, "#f00");
@@ -44,16 +44,18 @@
         ctx.moveTo(yArrow_x, yArrow_y);
         ctx.lineTo(yArrow_x - arrowWidth, yArrow_y + arrowWidth);
         ctx.strokeStyle = "#000";
+        
 
         //中断（坐标轴和折线的）连接
         ctx.stroke();
         ctx.beginPath();
-
+        ctx.fillStyle = color;
         //绘制折线
         for (var i = 0; i < data.length; i++) {
             var pointX = padding + (i + 1) * pointsWidth;
             var pointY = padding + arrowWidth + (1 - data[i]/maxNum) * yLength;
             ctx.lineTo(pointX, pointY);
+            ctx.fillText(data[i],pointX,pointY);
         }
         ctx.strokeStyle = color;
         ctx.stroke();
