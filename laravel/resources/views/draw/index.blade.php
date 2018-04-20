@@ -3,6 +3,19 @@
 <div style="margin:0 auto;text-align: center;">
     <h1 style="text-align: center;">statistics</h1>
 	<canvas id="cv" style="width:99%;height:300;border:0.05rem solid gray;"></canvas>
+    <form>
+        <tr>
+            <td>start date</td>
+            <td><input type="date" name="start_date"></td>
+        </tr>
+        <tr>
+            <td>end date</td>
+            <td><input type="date" name="end_date"></td>
+        </tr>
+        <tr>
+            <button type="submit"></button>
+        </tr>
+    </form>
 </div>
 <script type="text/javascript">
     var cv = document.getElementById("cv");
@@ -51,7 +64,7 @@
         ctx.stroke();
         ctx.beginPath();
         ctx.fillStyle = color;
-        var x_axis_height = padding + arrowWidth + yLength;
+        var x_axis_height = padding + arrowWidth + yLength + 10;
         //绘制折线
         for (var i = 0; i < data.length; i++) {
             var pointX = padding + (i + 1) * pointsWidth;
