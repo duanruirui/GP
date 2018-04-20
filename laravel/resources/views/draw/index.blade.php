@@ -51,12 +51,14 @@
         ctx.stroke();
         ctx.beginPath();
         ctx.fillStyle = color;
+        var x_axis_height = padding + arrowWidth + yLength;
         //绘制折线
         for (var i = 0; i < data.length; i++) {
             var pointX = padding + (i + 1) * pointsWidth;
             var pointY = padding + arrowWidth + (1 - data[i]/maxNum) * yLength;
             ctx.lineTo(pointX, pointY);
             ctx.fillText(data[i],pointX,pointY);
+            ctx.fillText(i,pointX,x_axis_height);
         }
         ctx.strokeStyle = color;
         ctx.stroke();
