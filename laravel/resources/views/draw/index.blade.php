@@ -20,6 +20,20 @@
     </form>
 </div>
 <div id="datas" style="display:none">{{$json_orders}}</div>
+<div class="data_table">
+    <table>
+        <tr>
+            <td>date</td>
+            <td>income</td>
+        </tr>
+@foreach($orders as $list)
+        <tr>
+            <td>{{$list['f_date']}}</td>
+            <td>{{$list['f_total_usefee']}}</td>
+        </tr>
+@endforeach       
+    </table>
+</div>
 <script type="text/javascript">
     var cv = document.getElementById("cv");
     var ctx = cv.getContext("2d");
