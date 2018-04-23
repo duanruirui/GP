@@ -17,7 +17,8 @@ use Auth;
 
 class StatisticsController extends Controller
 {
-	function __construct(){
+	private $auth_id;
+	public function __construct(){
 		$this->auth_id = Auth::id();
 	}
 	/**
