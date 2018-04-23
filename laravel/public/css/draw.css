@@ -1,0 +1,32 @@
+.data_table{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.data_table table{
+	width: 99%;
+	margin:0 auto;
+	border:solid .05rem #DDDDDD;
+	border-radius: .2rem;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+.data_table table thead{
+	border-collapse: separate;
+	background-color: #E8E9EE;
+}
+.data_table table thead tr{
+	border-top: solid .05rem #dddddd;
+}
+.data_table table thead tr th{
+	border-left: solid .05rem #dddddd;
+}
+.data_table table tbody{
+	border-collapse: separate;
+}
+.data_table table tbody tr{
+	border-top: solid .05rem #dddddd;	
+}
+.data_table table tbody tr td{
+	border-left: solid .05rem #dddddd;
+}
