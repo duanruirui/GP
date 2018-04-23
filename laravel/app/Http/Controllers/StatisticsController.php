@@ -17,17 +17,17 @@ use Auth;
 
 class StatisticsController extends Controller
 {
-	private $auth_id;
-	public function __construct(){
-		$this->auth_id = Auth::id();
-	}
+	// private $auth_id;
+	// public function __construct(){
+	// 	$this->auth_id = Auth::id();
+	// }
 	/**
 	*	transaction day datas index
 	*/
 	public static function indexDay(){
 		$start_date = date('Y-m-d');
     	$orders = Order::select('f_transaction_id,f_date,sum(f_payment) as f_total_fee')
-    		 ->where('f_transaction_id',$this->auth_id)
+    		 ->where('f_transaction_id',Auth::id())
     		 ->where('f_date',$start_date)
     		 ->get();
     	return view('draw.index')
@@ -51,7 +51,7 @@ class StatisticsController extends Controller
     	$start_date = $request->start_date;
     	$end_date = $request->end_date??date('Y-m-d');
     	$orders = Order::select('f_transaction_id,f_date,sum(f_payment) as f_total_fee')
-    		 ->where('f_transaction_id',$this->auth_id)
+    		 ->where('f_transaction_id',Auth::id())
     		 ->whereBetween('f_date',[$start_date,$end_date])
     		 ->groupBy('f_date')
     		 ->orderBy('f_date','ASC')
