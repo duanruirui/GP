@@ -17,11 +17,12 @@
         </tr>
     </form>
 </div>
-<div id="datas" value="{{$json_orders}}" style="display:none"></div>
+<div id="datas" style="display:none">{{$json_orders}}</div>
 <script type="text/javascript">
     var cv = document.getElementById("cv");
     var ctx = cv.getContext("2d");
-    conslo.log();
+    var json_orders = document.getElementById('datas');
+    conslo.log(json_orders.innerText);
     var data2 = [.3, .1, .2, .4, .2, .7, .3, .9];
     var data3 = [3, 12, 14, 17, 29, 33, 40, 52];
 
