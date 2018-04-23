@@ -4,6 +4,8 @@
     <h1 style="text-align: center;">statistics</h1>
 	<canvas id="cv" style="width:99%;height:300;border:0.05rem solid gray;"></canvas>
     <form method="post">
+        {{ csrf_field() }}
+        <input type="hidden" name="download" value="0">
         <tr>
             <td>start date</td>
             <td><input type="date" name="start_date" value="{{$start_date}}"></td>
