@@ -42,7 +42,7 @@ class StatisticsController extends Controller
 	/**
 	*	transaction day datas seach
 	*/	
-    public static function transactionDay(Request $request){
+    public function transactionDay(Request $request){
     	$this->validate($request,array(
     		'download' => 'required|integer',
     		'start_date' => 'required|date',
