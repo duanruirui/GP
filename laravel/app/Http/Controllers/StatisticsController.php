@@ -11,8 +11,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Statistics;
-use app\Order;
+use App\Statistics;
+use App\Order;
 use Auth;
 
 class StatisticsController extends Controller
@@ -55,7 +55,7 @@ class StatisticsController extends Controller
     		 ->groupBy('f_date')
     		 ->orderBy('f_date','ASC')
     		 ->get();
-    	if($download)){
+    	if($download){
     		//export CSV
     	}
     	return view('draw.index')
