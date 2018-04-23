@@ -22,7 +22,7 @@
     var cv = document.getElementById("cv");
     var ctx = cv.getContext("2d");
     var json_orders = document.getElementById('datas');
-    conslo.log(json_orders.innerText);
+    console.log(json_orders.innerText);
     var data2 = [.3, .1, .2, .4, .2, .7, .3, .9];
     var data3 = [3, 12, 14, 17, 29, 33, 40, 52];
 
