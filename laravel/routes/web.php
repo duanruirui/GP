@@ -12,7 +12,9 @@
 */
 Auth::routes();
 Route::get('/', ['middleware' => 'auth', 'uses' => 'HomeController@index']);
-Route::get('/test', function(){
+Route::get('/test', ['middleware' => 'auth',function(){
 	return view('draw.index');
-});
+}]);
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/datas/day', ['middleware' => 'auth', 'uses' => 'StatisticsController@indexDay']);
+Route::post('/datas/day', ['middleware' => 'auth', 'uses' => 'StatisticsController@transactionDay']);

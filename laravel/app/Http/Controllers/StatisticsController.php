@@ -17,23 +17,40 @@ use Auth;
 
 class StatisticsController extends Controller
 {
+	function __construct(){
+		$this->auth_id = Auth::id();
+	}
 	/**
-	*	transaction day datas
+	*	transaction day datas index
 	*/
-    public static function TransactionDay($request){
+	public static function indexDay(){
+		$start_date = date('Y-m-d');
+    	$orders = Order::select('f_transaction_id,f_date,sum(f_payment) as f_total_fee')
+    		 ->where('f_transaction_id',$this->auth_id)
+    		 ->where('f_date',$start_date)
+    		 ->get();
+    	return view('draw.index')
+	    	->with(array(
+	    		'orders'=>$orders,
+	    		'json_orders'=>self::make_json($orders),
+	    		'start_date'=>$start_date,
+	    		'end_date'=>$start_date,
+	    	));
+	}
+	/**
+	*	transaction day datas seach
+	*/	
+    public static function transactionDay($request){
     	$this->validate($request,array(
     		'download' => 'required|integer',
-    		// 'trans_id' => 'required|integer',
     		'start_date' => 'required|date',
-    		// 'end_date' => 'required|date',
+    		'end_date' => 'required|date',
     	));
     	$download = $request->download;
-    	// $trans_id = $request->trans_id;
-    	$trans_id = Auth::id();
     	$start_date = $request->start_date;
     	$end_date = $request->end_date??date('Y-m-d');
     	$orders = Order::select('f_transaction_id,f_date,sum(f_payment) as f_total_fee')
-    		 ->where('f_transaction_id',$trans_id)
+    		 ->where('f_transaction_id',$this->auth_id)
     		 ->whereBetween('f_date',[$start_date,$end_date])
     		 ->groupBy('f_date')
     		 ->orderBy('f_date','ASC')
@@ -44,8 +61,19 @@ class StatisticsController extends Controller
     	return view('draw.index')
 	    	->with(array(
 	    		'orders'=>$orders,
+	    		'json_orders'=>self::make_json($orders),
 	    		'start_date'=>$start_date,
 	    		'end_date'=>$end_date,
 	    	));
+    }
+    /**
+    *return json type data for drawing
+    */
+    protected static function make_json($obj){
+    	$json_string = '{';
+    	foreach ($obj as $key => $value) {
+    		$json_string .='"'.$value->f_date.'":'.$value->f_total_fee.',';
+    	}
+    	return rtrim($json_string,',').'}';
     }
 }

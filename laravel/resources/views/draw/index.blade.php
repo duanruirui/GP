@@ -6,20 +6,21 @@
     <form>
         <tr>
             <td>start date</td>
-            <td><input type="date" name="start_date"></td>
+            <td><input type="date" name="start_date" placeholder="{{$start_date}}"></td>
         </tr>
         <tr>
             <td>end date</td>
-            <td><input type="date" name="end_date"></td>
+            <td><input type="date" name="end_date" placeholder="$end_date"></td>
         </tr>
         <tr>
-            <button type="submit"></button>
+            <button type="submit">search</button>
         </tr>
     </form>
 </div>
 <script type="text/javascript">
     var cv = document.getElementById("cv");
     var ctx = cv.getContext("2d");
+    conslo.log({{$json_orders}});
     var data2 = [.3, .1, .2, .4, .2, .7, .3, .9];
     var data3 = [3, 12, 14, 17, 29, 33, 40, 52];
 
