@@ -22,16 +22,23 @@
 <div id="datas" style="display:none">{{$json_orders}}</div>
 <div class="data_table">
     <table>
-        <tr>
-            <td>date</td>
-            <td>income</td>
-        </tr>
-@foreach($orders as $list)
-        <tr>
-            <td>{{$list['f_date']}}</td>
-            <td>{{$list['f_total_usefee']}}</td>
-        </tr>
-@endforeach       
+        <thead class="table_title">
+            <tr>
+                <th>date</th>
+                <th>income</th>
+            </tr>            
+        </thead>
+        <tbody class="table_fill_content">
+            @foreach($orders as $list)
+            <tr>
+                <td>{{$list['f_date']}}</td>
+                <td>{{$list['f_total_fee']}}</td>
+            </tr>
+            @endforeach            
+        </tbody>
+<!--         <tfoot class="table_foot">
+            <tr>pagenate</tr>
+        </tfoot> -->
     </table>
 </div>
 <script type="text/javascript">
