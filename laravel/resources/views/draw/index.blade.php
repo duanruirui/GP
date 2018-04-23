@@ -3,7 +3,7 @@
 <div style="margin:0 auto;text-align: center;">
     <h1 style="text-align: center;">statistics</h1>
 	<canvas id="cv" style="width:99%;height:300;border:0.05rem solid gray;"></canvas>
-    <form>
+    <form method="post">
         <tr>
             <td>start date</td>
             <td><input type="date" name="start_date" placeholder="{{$start_date}}"></td>
@@ -28,14 +28,15 @@
 
     // getBrokenLine(data2, "#f00");
     // getBrokenLine(data3, "#0f0");
-    
+
     drawMap(json_orders, "#0f0");
 
     //封装一个折线图的函数
     function drawMap(obj_data,color){
-        var data = key = new array();
+        var data = new array();
+        var key = new array();
         for(k in obj_data){
-            key.push(k);
+            key.push(k.substring(5));
             data.push(obj_data[k]);
         }
         var maxNum = Math.max.apply(null, data);    //求数组中的最大值
