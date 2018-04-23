@@ -6,11 +6,11 @@
     <form method="post">
         <tr>
             <td>start date</td>
-            <td><input type="date" name="start_date" placeholder="{{$start_date}}"></td>
+            <td><input type="date" name="start_date" value="{{$start_date}}"></td>
         </tr>
         <tr>
             <td>end date</td>
-            <td><input type="date" name="end_date" placeholder="{{$end_date}}"></td>
+            <td><input type="date" name="end_date" value="{{$end_date}}"></td>
         </tr>
         <tr>
             <button type="submit">search</button>
@@ -33,8 +33,8 @@
 
     //封装一个折线图的函数
     function drawMap(obj_data,color){
-        var data = new array();
-        var key = new array();
+        var data = new Array();
+        var key = new Array();
         for(k in obj_data){
             key.push(k.substring(5));
             data.push(obj_data[k]);
