@@ -24,14 +24,14 @@
     <table>
         <thead class="table_title">
             <tr>
-                <th>date</th>
+                <th>week</th>
                 <th>income</th>
             </tr>            
         </thead>
         <tbody class="table_fill_content">
             @forelse($orders as $list)
             <tr>
-                <td>{{$list['f_date']}}</td>
+                <td>{{$list['f_week']}}</td>
                 <td>{{$list['f_total_fee']}}</td>
             </tr>
             @empty
@@ -61,7 +61,8 @@
         var data = new Array();
         var key = new Array();
         for(k in obj_data){
-            key.push(k.substring(5));
+            // key.push(k.substring(5));
+            key.push(k);
             data.push(obj_data[k]);
         }
         var maxNum = Math.max.apply(null, data);    //求数组中的最大值
